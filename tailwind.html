@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sailesh Ravi | Portfolio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+/* Smooth Scroll */
+html{
+scroll-behavior:smooth;
+}
+
+/* Premium Dark Gradient Background */
+
+body{
+background: radial-gradient(circle at top,#0f172a,#020617);
+color:white;
+overflow-x:hidden;
+}
+
+/* Floating gradient orbs */
+
+.orb{
+position:absolute;
+border-radius:50%;
+filter:blur(120px);
+opacity:.5;
+animation: float 12s ease-in-out infinite;
+}
+
+.orb1{
+width:350px;
+height:350px;
+background:#3b82f6;
+top:-100px;
+left:-100px;
+}
+
+.orb2{
+width:300px;
+height:300px;
+background:#9333ea;
+bottom:-120px;
+right:-100px;
+animation-delay:4s;
+}
+
+.orb3{
+width:250px;
+height:250px;
+background:#06b6d4;
+top:40%;
+left:60%;
+animation-delay:2s;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-40px)}
+}
+
+/* Glass Navbar */
+
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+/* Card Hover */
+
+.card{
+transition:all .4s ease;
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 20px 50px rgba(0,0,0,.6);
+}
+
+/* Profile glow */
+
+.profile{
+box-shadow:0 0 40px rgba(59,130,246,.7);
+}
+
+/* Section fade animation */
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+animation:fadeUp 1s forwards;
+}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Background Orbs -->
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<!-- Navbar -->
+
+<nav class="glass sticky top-0 z-50">
+
+<div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+
+<h1 class="text-xl font-bold tracking-wider hover:text-blue-400 transition">
+Sujit V S
+</h1>
+
+<ul class="flex space-x-8 text-sm">
+
+<li><a href="#about" class="hover:text-blue-400">About</a></li>
+<li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+<li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+<li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<!-- Hero Section -->
+
+<section class="py-28 fade">
+
+<div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+
+<img src="profile.jpg.jpeg"
+class="w-60 h-60 rounded-full object-cover border-4 border-white profile hover:scale-105 transition duration-500">
+
+<div>
+
+<h2 class="text-5xl font-bold mb-4 hover:text-blue-400 transition">
+Sujit V S
+</h2>
+
+<p class="text-gray-300 text-lg">
+Web Developer • Software Engineer
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about" class="max-w-6xl mx-auto px-6 py-20 fade">
+
+<h3 class="text-3xl font-semibold mb-6 text-blue-400">
+About Me
+</h3>
+
+<p class="text-gray-300 leading-relaxed max-w-3xl">
+I am a passionate developer focused on building modern web
+applications and solving real-world problems using technology.
+I enjoy designing efficient systems and creating engaging user
+experiences.
+</p>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills" class="py-20 fade">
+
+<div class="max-w-6xl mx-auto px-6">
+
+<h3 class="text-3xl font-semibold mb-12 text-blue-400">
+Technical Skills
+</h3>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card bg-white/5 p-6 rounded-xl backdrop-blur-md">HTML5</div>
+<div class="card bg-white/5 p-6 rounded-xl backdrop-blur-md">CSS3</div>
+<div class="card bg-white/5 p-6 rounded-xl backdrop-blur-md">JavaScript</div>
+<div class="card bg-white/5 p-6 rounded-xl backdrop-blur-md">C</div>
+<div class="card bg-white/5 p-6 rounded-xl backdrop-blur-md">C++</div>
+<div class="card bg-white/5 p-6 rounded-xl backdrop-blur-md">Data Structures</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects" class="py-20 fade">
+
+<div class="max-w-6xl mx-auto px-6">
+
+<h3 class="text-3xl font-semibold mb-12 text-blue-400">
+Projects
+</h3>
+
+<div class="grid md:grid-cols-2 gap-10">
+
+<div class="card bg-white/5 p-8 rounded-xl backdrop-blur-md">
+
+<h4 class="text-xl font-semibold mb-3">
+Aerial WildGuard
+</h4>
+
+<p class="text-gray-300">
+Drone-based wildlife monitoring system using Python and
+OpenCV for animal detection and conflict prevention.
+</p>
+
+</div>
+
+<div class="card bg-white/5 p-8 rounded-xl backdrop-blur-md">
+
+<h4 class="text-xl font-semibold mb-3">
+Crash Detection System
+</h4>
+
+<p class="text-gray-300">
+IoT accident detection system that sends real-time alerts
+through SMS and Telegram.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="py-20 fade">
+
+<div class="max-w-6xl mx-auto px-6">
+
+<h3 class="text-3xl font-semibold mb-8 text-blue-400">
+Contact
+</h3>
+
+<p>Email:
+<a href="mailto:saileshravi" class="text-blue-400 hover:underline">
+vssujit7@gmail.com
+</a>
+</p>
+
+<p>Phone:
+<a href="tel:+919976662248" class="text-blue-400 hover:underline">
++91 9976662248
+</a>
+</p>
+
+<p>LinkedIn:
+<a href="https://linkedin.com/in/sujit-vs-0b388b321"
+class="text-blue-400 hover:underline">
+linkedin.com/in/sujit-vs
+</a>
+</p>
+
+<p>GitHub:
+<a href="https://github.com/sujitvs"
+class="text-blue-400 hover:underline">
+github.com/sujitvs
+</a>
+</p>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="text-center py-6 text-gray-400 border-t border-white/10">
+
+© 2025 Sujit V S
+
+</footer>
+
+</body>
+</html>
